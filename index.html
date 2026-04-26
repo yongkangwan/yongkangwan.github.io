@@ -1,31 +1,42 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Yongkang Wan's Homepage</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
+      font-family: Arial, "Microsoft YaHei", sans-serif;
       max-width: 900px;
       margin: 60px auto;
       padding: 0 24px;
       line-height: 1.7;
       color: #222;
     }
+
+    .top-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 36px;
+    }
+
     h1 {
       font-size: 42px;
       margin-bottom: 8px;
     }
+
     h2 {
       margin-top: 36px;
       border-bottom: 1px solid #ddd;
       padding-bottom: 6px;
     }
+
     .subtitle {
       font-size: 18px;
       color: #555;
     }
+
     .tag {
       display: inline-block;
       margin: 4px 6px 4px 0;
@@ -34,84 +45,206 @@
       border-radius: 14px;
       font-size: 14px;
     }
+
     a {
       color: #0969da;
       text-decoration: none;
+    }
+
+    button {
+      padding: 8px 14px;
+      border: 1px solid #ccc;
+      border-radius: 18px;
+      background: white;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    button:hover {
+      background: #f6f8fa;
+    }
+
+    .en {
+      display: none;
     }
   </style>
 </head>
 
 <body>
-  <h1>Yongkang Wan</h1>
-  <p class="subtitle">
-    Graduate student interested in AIGC, AI Agent Safety, and AI Security.
-  </p>
+  <div class="top-bar">
+    <div></div>
+    <button onclick="toggleLanguage()" id="langBtn">English</button>
+  </div>
 
-  <h2>About Me</h2>
-  <p>
-    I am interested in building and evaluating trustworthy AI systems,
-    especially long-running personalized agents with persistent memory,
-    workspace files, tool use, and cross-session continuity.
-  </p>
+  <!-- 中文版本 -->
+  <div class="zh">
+    <h1>万永康</h1>
+    <p class="subtitle">
+      关注 AIGC、AI Agent 安全与人工智能安全的研究生。
+    </p>
 
-  <h2>Research Interests</h2>
-  <p>
-    <span class="tag">AI Agent Safety</span>
-    <span class="tag">AIGC Security</span>
-    <span class="tag">Memory-Centric Benchmarking</span>
-    <span class="tag">Prompt Injection</span>
-    <span class="tag">Long-running Agents</span>
-    <span class="tag">Benchmark Design</span>
-  </p>
+    <h2>关于我</h2>
+    <p>
+      我对可信人工智能系统的构建与评测感兴趣，尤其关注具有长期记忆、
+      工作区文件、工具调用和跨会话连续性的个性化智能体。
+    </p>
 
-  <h2>Current Work</h2>
-  <p>
-    My current research focuses on memory-centric safety evaluation for
-    OpenClaw-style agents. I study how persistent memory, workspace files,
-    compaction, recovery, and tool use introduce new safety risks beyond
-    single-turn prompt injection.
-  </p>
+    <h2>研究兴趣</h2>
+    <p>
+      <span class="tag">AI Agent 安全</span>
+      <span class="tag">AIGC 安全</span>
+      <span class="tag">记忆中心安全评测</span>
+      <span class="tag">Prompt Injection</span>
+      <span class="tag">长期运行智能体</span>
+      <span class="tag">Benchmark 设计</span>
+    </p>
 
-  <h2>Selected Projects</h2>
+    <h2>当前研究</h2>
+    <p>
+      我目前的研究聚焦于 OpenClaw 风格长期个性化智能体的记忆安全评测。
+      我关注持久记忆、工作区文件、压缩摘要、恢复机制和工具调用如何引入
+      超越单轮提示词注入的新型安全风险。
+    </p>
 
-  <h3>OpenClaw Safety Benchmark</h3>
-  <p>
-    A benchmark for evaluating safety risks in long-running personalized agents,
-    focusing on permission boundary violations, memory poisoning, persistent
-    instruction planting, behavior trace privacy leakage, and unsafe tool use.
-  </p>
+    <h2>代表项目</h2>
 
-  <h3>AI Security Education Platform</h3>
-  <p>
-    An AI-powered information security education and risk assessment platform
-    for campus scenarios, including phishing detection, risk assessment,
-    security knowledge base, and AI-based Q&A.
-  </p>
+    <h3>OpenClaw Safety Benchmark</h3>
+    <p>
+      一个面向长期运行个性化智能体的安全评测基准，重点关注权限边界违规、
+      记忆污染、持久化指令植入、行为轨迹隐私泄露以及由长期上下文触发的
+      不安全工具调用。
+    </p>
 
-  <h3>Algorithm Engineering</h3>
-  <p>
-    High-performance computational geometry optimization for large-scale polygon
-    separation queries, focusing on preprocessing acceleration and
-    speed-accuracy tradeoffs.
-  </p>
+    <h3>AI 信息安全教育平台</h3>
+    <p>
+      面向校园场景的人工智能信息安全教育与风险评估平台，包含钓鱼信息识别、
+      风险评估工具、安全知识库和基于 AI 的安全问答模块。
+    </p>
 
-  <h2>Skills</h2>
-  <p>
-    <span class="tag">Python</span>
-    <span class="tag">C++</span>
-    <span class="tag">Java</span>
-    <span class="tag">Spring Boot</span>
-    <span class="tag">PyTorch</span>
-    <span class="tag">scikit-learn</span>
-    <span class="tag">Docker</span>
-    <span class="tag">Linux</span>
-    <span class="tag">LaTeX</span>
-  </p>
+    <h3>算法工程与竞赛优化</h3>
+    <p>
+      关注高性能计算几何优化，尤其是大规模多边形最小平移分离查询中的
+      预处理加速、缓存友好实现以及速度与精度平衡。
+    </p>
 
-  <h2>Contact</h2>
-  <p>
-    Email: your_email@example.com<br />
-    GitHub: <a href="https://github.com/your_username">@your_username</a>
-  </p>
+    <h2>技术栈</h2>
+    <p>
+      <span class="tag">Python</span>
+      <span class="tag">C++</span>
+      <span class="tag">Java</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">scikit-learn</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Linux</span>
+      <span class="tag">LaTeX</span>
+    </p>
+
+    <h2>联系方式</h2>
+    <p>
+      Email: wyk09160258@mail.ustc.edu.cn<br />
+      GitHub: <a href="https://github.com/yongkangwan">@yongkangwan</a>
+    </p>
+  </div>
+
+  <!-- 英文版本 -->
+  <div class="en">
+    <h1>Yongkang Wan</h1>
+    <p class="subtitle">
+      Graduate student interested in AIGC, AI Agent Safety, and AI Security.
+    </p>
+
+    <h2>About Me</h2>
+    <p>
+      I am interested in building and evaluating trustworthy AI systems,
+      especially long-running personalized agents with persistent memory,
+      workspace files, tool use, and cross-session continuity.
+    </p>
+
+    <h2>Research Interests</h2>
+    <p>
+      <span class="tag">AI Agent Safety</span>
+      <span class="tag">AIGC Security</span>
+      <span class="tag">Memory-Centric Benchmarking</span>
+      <span class="tag">Prompt Injection</span>
+      <span class="tag">Long-running Agents</span>
+      <span class="tag">Benchmark Design</span>
+    </p>
+
+    <h2>Current Research</h2>
+    <p>
+      My current research focuses on memory-centric safety evaluation for
+      OpenClaw-style long-running personalized agents. I study how persistent
+      memory, workspace files, compaction, recovery, and tool use introduce new
+      safety risks beyond single-turn prompt injection.
+    </p>
+
+    <h2>Selected Projects</h2>
+
+    <h3>OpenClaw Safety Benchmark</h3>
+    <p>
+      A benchmark for evaluating safety risks in long-running personalized
+      agents, focusing on permission boundary violations, memory poisoning,
+      persistent instruction planting, behavior trace privacy leakage, and
+      unsafe tool use triggered by long-term context.
+    </p>
+
+    <h3>AI Security Education Platform</h3>
+    <p>
+      An AI-powered information security education and risk assessment platform
+      for campus scenarios, including phishing detection, risk assessment,
+      security knowledge base, and AI-based Q&A.
+    </p>
+
+    <h3>Algorithm Engineering</h3>
+    <p>
+      High-performance computational geometry optimization for large-scale
+      polygon separation queries, focusing on preprocessing acceleration,
+      cache-friendly implementation, and speed-accuracy tradeoffs.
+    </p>
+
+    <h2>Skills</h2>
+    <p>
+      <span class="tag">Python</span>
+      <span class="tag">C++</span>
+      <span class="tag">Java</span>
+      <span class="tag">Spring Boot</span>
+      <span class="tag">PyTorch</span>
+      <span class="tag">scikit-learn</span>
+      <span class="tag">Docker</span>
+      <span class="tag">Linux</span>
+      <span class="tag">LaTeX</span>
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      Email: wyk09160258@mail.ustc.edu.cn<br />
+      GitHub: <a href="https://github.com/yongkangwan">@yongkangwan</a>
+    </p>
+  </div>
+
+  <script>
+    let currentLang = "zh";
+
+    function toggleLanguage() {
+      const zh = document.querySelector(".zh");
+      const en = document.querySelector(".en");
+      const btn = document.getElementById("langBtn");
+
+      if (currentLang === "zh") {
+        zh.style.display = "none";
+        en.style.display = "block";
+        btn.innerText = "中文";
+        document.documentElement.lang = "en";
+        currentLang = "en";
+      } else {
+        zh.style.display = "block";
+        en.style.display = "none";
+        btn.innerText = "English";
+        document.documentElement.lang = "zh-CN";
+        currentLang = "zh";
+      }
+    }
+  </script>
 </body>
 </html>
