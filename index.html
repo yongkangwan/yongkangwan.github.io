@@ -312,6 +312,14 @@
       color: var(--muted);
     }
 
+    .meta {
+      display: block;
+      margin-bottom: 8px;
+      color: #475569;
+      font-size: 14px;
+      font-weight: 600;
+    }
+
     footer {
       text-align: center;
       color: var(--muted);
@@ -352,9 +360,9 @@
 
       <div class="nav-links">
         <a href="#about" data-i18n="navAbout">关于我</a>
-        <a href="#research" data-i18n="navResearch">研究方向</a>
-        <a href="#projects" data-i18n="navProjects">代表项目</a>
-        <a href="#skills" data-i18n="navSkills">技术栈</a>
+        <a href="#education" data-i18n="navEducation">教育背景</a>
+        <a href="#research" data-i18n="navResearch">科研经历</a>
+        <a href="#skills" data-i18n="navSkills">专业技能</a>
         <a href="#contact" data-i18n="navContact">联系方式</a>
         <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">English</button>
       </div>
@@ -362,14 +370,14 @@
 
     <header class="hero">
       <div>
-        <div class="eyebrow" data-i18n="eyebrow">AIGC · AI Agent Safety · AI Security</div>
+        <div class="eyebrow" data-i18n="eyebrow">Artificial Intelligence · NLP · Medical AI</div>
         <h1 data-i18n="heroTitle">万永康</h1>
         <p class="subtitle" data-i18n="heroSubtitle">
-          关注 AIGC、AI Agent 安全与人工智能安全的研究生，致力于构建和评测更加可信的智能体系统。
+          中国科学技术大学人工智能专业本科生，关注大语言模型评测、医学人工智能、自然语言处理与深度学习。
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="#projects" data-i18n="viewProjects">查看项目</a>
+          <a class="btn primary" href="#research" data-i18n="viewResearch">查看科研经历</a>
           <a class="btn" href="https://github.com/yongkangwan" target="_blank">GitHub</a>
           <a class="btn" href="#contact" data-i18n="contactMe">联系我</a>
         </div>
@@ -378,81 +386,109 @@
       <aside class="profile-card">
         <div class="avatar">YW</div>
         <h2>Yongkang Wan</h2>
-        <p data-i18n="profileDesc">Graduate Student / AI Safety Researcher</p>
-        <span class="status" data-i18n="status">Currently working on OpenClaw-style agent safety</span>
+        <p data-i18n="profileDesc">USTC Undergraduate / Artificial Intelligence</p>
+        <span class="status" data-i18n="status">Interested in LLM Evaluation, NLP, and Medical AI</span>
       </aside>
     </header>
 
     <section id="about">
       <h2 class="section-title" data-i18n="aboutTitle">关于我</h2>
       <p class="section-desc" data-i18n="aboutText">
-        我对可信人工智能系统的构建与评测感兴趣，尤其关注具有长期记忆、工作区文件、工具调用和跨会话连续性的个性化智能体。
+        我目前就读于中国科学技术大学人工智能专业，研究兴趣集中在大语言模型评测、医学垂直领域推理、自然语言处理、医学图像生成以及真实世界医疗数据分析。
       </p>
 
       <div class="tags" id="interestTags"></div>
     </section>
 
-    <section id="research">
-      <h2 class="section-title" data-i18n="researchTitle">当前研究</h2>
-      <p class="section-desc" data-i18n="researchText">
-        我的研究聚焦于 OpenClaw 风格长期个性化智能体的记忆安全评测，关注记忆写入、检索、压缩、恢复与工具调用链条中的安全风险。
-      </p>
+    <section id="education">
+      <h2 class="section-title" data-i18n="educationTitle">教育背景</h2>
 
-      <div class="grid">
-        <div class="card">
-          <h3 data-i18n="researchCard1Title">记忆安全</h3>
-          <p data-i18n="researchCard1Text">研究持久记忆如何从辅助上下文转变为影响未来行为的主动攻击面。</p>
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3 data-i18n="eduSchool">中国科学技术大学（USTC）</h3>
+          <span class="meta" data-i18n="eduMeta">理学学士，人工智能专业｜2023 年 9 月 – 预计 2027 年 6 月｜合肥，中国</span>
+          <p data-i18n="eduText">
+            GPA: 3.72 / 4.3，专业排名: 21 / 80。核心课程包括机器学习、数学分析、线性代数等。
+          </p>
         </div>
 
-        <div class="card">
-          <h3 data-i18n="researchCard2Title">Agent 安全评测</h3>
-          <p data-i18n="researchCard2Text">设计面向长期运行智能体的 benchmark、风险分类和自动化评测流程。</p>
-        </div>
-
-        <div class="card">
-          <h3 data-i18n="researchCard3Title">工具调用风险</h3>
-          <p data-i18n="researchCard3Text">分析权限边界、提示注入和长期上下文如何触发不安全工具调用。</p>
+        <div class="timeline-item">
+          <h3 data-i18n="awardTitle">中国科学技术大学优秀学生金奖</h3>
+          <span class="meta" data-i18n="awardMeta">2024 年</span>
+          <p data-i18n="awardText">
+            获得中国科学技术大学优秀学生金奖。
+          </p>
         </div>
       </div>
     </section>
 
-    <section id="projects">
-      <h2 class="section-title" data-i18n="projectsTitle">代表项目</h2>
+    <section id="research">
+      <h2 class="section-title" data-i18n="researchTitle">科研经历</h2>
+      <p class="section-desc" data-i18n="researchIntro">
+        我的研究经历主要围绕医学人工智能、大语言模型评测、自然语言处理、深度学习与医学数据分析展开。
+      </p>
 
-      <div class="timeline">
+      <div class="grid">
+        <div class="card">
+          <h3 data-i18n="researchCard1Title">大语言模型医学推理评测</h3>
+          <p data-i18n="researchCard1Text">
+            调研并评估主流大语言模型在传统中医药等复杂医学垂直领域中的推理逻辑与事实准确性。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="researchCard2Title">BERT 医学造假检测</h3>
+          <p data-i18n="researchCard2Text">
+            基于论文标题与摘要微调 BERT，并分析医学文本分类任务中的数据偏差与捷径学习问题。
+          </p>
+        </div>
+
+        <div class="card">
+          <h3 data-i18n="researchCard3Title">医学影像与统计分析</h3>
+          <p data-i18n="researchCard3Text">
+            搭建 pix2pix GAN 进行医学图像翻译，并分析医学统计数据中的脑区体积与 FA 值关系。
+          </p>
+        </div>
+      </div>
+
+      <div class="timeline" style="margin-top: 22px;">
         <div class="timeline-item">
-          <h3>OpenClaw Safety Benchmark</h3>
-          <p data-i18n="project1Text">
-            一个面向长期运行个性化智能体的安全评测基准，关注权限边界、记忆污染、持久化指令植入、行为轨迹隐私泄露等风险。
+          <h3 data-i18n="exp1Title">大语言模型在垂直领域（中医药）的推理能力评测</h3>
+          <span class="meta" data-i18n="exp1Meta">科研助理｜USTC｜2026 年初 – 至今</span>
+          <p data-i18n="exp1Text">
+            调研并评估当前主流大型语言模型在传统中医药等复杂医学垂直领域的推理逻辑与事实准确性；探索领域特异性的客观评测框架，并研究基于 RAG 的技术链路，以缓解大语言模型在严谨医学场景下的幻觉问题。
           </p>
         </div>
 
         <div class="timeline-item">
-          <h3 data-i18n="project2Title">AI 信息安全教育平台</h3>
-          <p data-i18n="project2Text">
-            面向校园场景的人工智能信息安全教育与风险评估平台，包含钓鱼信息识别、风险评估、安全知识库和 AI 问答模块。
+          <h3 data-i18n="exp2Title">基于 BERT 的医学造假检测与数据集偏差分析</h3>
+          <span class="meta" data-i18n="exp2Meta">核心开发者｜NLP & Deep Learning｜USTC｜2026 年 1 月 – 2026 年 3 月</span>
+          <p data-i18n="exp2Text">
+            使用 BERT 模型，仅基于论文标题与摘要进行微调，尝试构建癌症领域分类器；针对模型泛化能力受限现象进行错误分析，定位由数据来源分布不均导致的捷径学习问题，并进一步分析主题分布与英文写作风格差异带来的隐性偏差。
           </p>
         </div>
 
         <div class="timeline-item">
-          <h3 data-i18n="project3Title">算法工程与竞赛优化</h3>
-          <p data-i18n="project3Text">
-            关注高性能计算几何优化，包括大规模多边形分离查询、预处理加速、缓存友好实现和速度精度平衡。
+          <h3 data-i18n="exp3Title">医学影像生成与统计数据挖掘</h3>
+          <span class="meta" data-i18n="exp3Meta">核心开发者｜CV & Statistics｜USTC｜2025 年 7 月 – 2025 年 9 月</span>
+          <p data-i18n="exp3Text">
+            搭建并训练 pix2pix 生成对抗网络模型，探索癌症图像翻译任务；处理并分析复杂医学统计数据集，探究脑区体积与各向异性分数（FA 值）之间的相关性，并积累真实世界医疗数据清洗与特征提取经验。
           </p>
         </div>
       </div>
     </section>
 
     <section id="skills">
-      <h2 class="section-title" data-i18n="skillsTitle">技术栈</h2>
+      <h2 class="section-title" data-i18n="skillsTitle">专业技能</h2>
       <div class="tags" id="skillTags"></div>
     </section>
 
     <section id="contact">
       <h2 class="section-title" data-i18n="contactTitle">联系方式</h2>
       <p>
-        Email: your_email@example.com<br />
-        GitHub: <a href="https://github.com/yongkangwan" target="_blank">@yongkangwan</a>
+        Email: <a href="mailto:wyk09160258@mail.ustc.edu.cn">wyk09160258@mail.ustc.edu.cn</a><br />
+        GitHub: <a href="https://github.com/yongkangwan" target="_blank">@yongkangwan</a><br />
+        Location: Hefei, China
       </p>
     </section>
 
@@ -467,72 +503,160 @@
     const content = {
       zh: {
         navAbout: "关于我",
-        navResearch: "研究方向",
-        navProjects: "代表项目",
-        navSkills: "技术栈",
+        navEducation: "教育背景",
+        navResearch: "科研经历",
+        navSkills: "专业技能",
         navContact: "联系方式",
-        eyebrow: "AIGC · AI Agent 安全 · AI 安全",
+
+        eyebrow: "人工智能 · 自然语言处理 · 医学 AI",
         heroTitle: "万永康",
-        heroSubtitle: "关注 AIGC、AI Agent 安全与人工智能安全的研究生，致力于构建和评测更加可信的智能体系统。",
-        viewProjects: "查看项目",
+        heroSubtitle: "中国科学技术大学人工智能专业本科生，关注大语言模型评测、医学人工智能、自然语言处理与深度学习。",
+        viewResearch: "查看科研经历",
         contactMe: "联系我",
-        profileDesc: "研究生 / AI 安全研究者",
-        status: "当前关注 OpenClaw 风格智能体安全",
+        profileDesc: "USTC 本科生 / 人工智能专业",
+        status: "关注 LLM Evaluation、NLP 与 Medical AI",
+
         aboutTitle: "关于我",
-        aboutText: "我对可信人工智能系统的构建与评测感兴趣，尤其关注具有长期记忆、工作区文件、工具调用和跨会话连续性的个性化智能体。",
-        researchTitle: "当前研究",
-        researchText: "我的研究聚焦于 OpenClaw 风格长期个性化智能体的记忆安全评测，关注记忆写入、检索、压缩、恢复与工具调用链条中的安全风险。",
-        researchCard1Title: "记忆安全",
-        researchCard1Text: "研究持久记忆如何从辅助上下文转变为影响未来行为的主动攻击面。",
-        researchCard2Title: "Agent 安全评测",
-        researchCard2Text: "设计面向长期运行智能体的 benchmark、风险分类和自动化评测流程。",
-        researchCard3Title: "工具调用风险",
-        researchCard3Text: "分析权限边界、提示注入和长期上下文如何触发不安全工具调用。",
-        projectsTitle: "代表项目",
-        project1Text: "一个面向长期运行个性化智能体的安全评测基准，关注权限边界、记忆污染、持久化指令植入、行为轨迹隐私泄露等风险。",
-        project2Title: "AI 信息安全教育平台",
-        project2Text: "面向校园场景的人工智能信息安全教育与风险评估平台，包含钓鱼信息识别、风险评估、安全知识库和 AI 问答模块。",
-        project3Title: "算法工程与竞赛优化",
-        project3Text: "关注高性能计算几何优化，包括大规模多边形分离查询、预处理加速、缓存友好实现和速度精度平衡。",
-        skillsTitle: "技术栈",
+        aboutText: "我目前就读于中国科学技术大学人工智能专业，研究兴趣集中在大语言模型评测、医学垂直领域推理、自然语言处理、医学图像生成以及真实世界医疗数据分析。",
+
+        educationTitle: "教育背景",
+        eduSchool: "中国科学技术大学（USTC）",
+        eduMeta: "理学学士，人工智能专业｜2023 年 9 月 – 预计 2027 年 6 月｜合肥，中国",
+        eduText: "GPA: 3.72 / 4.3，专业排名: 21 / 80。核心课程包括机器学习 A、数学分析 B1、数学分析 B2、线性代数等。",
+        awardTitle: "中国科学技术大学优秀学生金奖",
+        awardMeta: "2024 年",
+        awardText: "获得中国科学技术大学优秀学生金奖。",
+
+        researchTitle: "科研经历",
+        researchIntro: "我的研究经历主要围绕医学人工智能、大语言模型评测、自然语言处理、深度学习与医学数据分析展开。",
+
+        researchCard1Title: "大语言模型医学推理评测",
+        researchCard1Text: "调研并评估主流大语言模型在传统中医药等复杂医学垂直领域中的推理逻辑与事实准确性。",
+        researchCard2Title: "BERT 医学造假检测",
+        researchCard2Text: "基于论文标题与摘要微调 BERT，并分析医学文本分类任务中的数据偏差与捷径学习问题。",
+        researchCard3Title: "医学影像与统计分析",
+        researchCard3Text: "搭建 pix2pix GAN 进行医学图像翻译，并分析医学统计数据中的脑区体积与 FA 值关系。",
+
+        exp1Title: "大语言模型在垂直领域（中医药）的推理能力评测",
+        exp1Meta: "科研助理｜USTC｜2026 年初 – 至今",
+        exp1Text: "调研并评估当前主流大型语言模型在传统中医药等复杂医学垂直领域的推理逻辑与事实准确性；探索领域特异性的客观评测框架，并研究基于 RAG 的技术链路，以缓解大语言模型在严谨医学场景下的幻觉问题。",
+
+        exp2Title: "基于 BERT 的医学造假检测与数据集偏差分析",
+        exp2Meta: "核心开发者｜NLP & Deep Learning｜USTC｜2026 年 1 月 – 2026 年 3 月",
+        exp2Text: "使用 BERT 模型，仅基于论文标题与摘要进行微调，尝试构建癌症领域分类器；针对模型泛化能力受限现象进行错误分析，定位由数据来源分布不均导致的捷径学习问题，并进一步分析主题分布与英文写作风格差异带来的隐性偏差。",
+
+        exp3Title: "医学影像生成与统计数据挖掘",
+        exp3Meta: "核心开发者｜CV & Statistics｜USTC｜2025 年 7 月 – 2025 年 9 月",
+        exp3Text: "搭建并训练 pix2pix 生成对抗网络模型，探索癌症图像翻译任务；处理并分析复杂医学统计数据集，探究脑区体积与各向异性分数（FA 值）之间的相关性，并积累真实世界医疗数据清洗与特征提取经验。",
+
+        skillsTitle: "专业技能",
         contactTitle: "联系方式",
-        interests: ["AI Agent 安全", "AIGC 安全", "记忆中心安全评测", "Prompt Injection", "长期运行智能体", "Benchmark 设计"],
-        skills: ["Python", "C++", "Java", "Spring Boot", "PyTorch", "scikit-learn", "Docker", "Linux", "LaTeX"]
+
+        interests: [
+          "大语言模型评测",
+          "医学人工智能",
+          "自然语言处理",
+          "深度学习",
+          "医学图像生成",
+          "数据集偏差分析",
+          "RAG",
+          "模型幻觉缓解"
+        ],
+
+        skills: [
+          "Python",
+          "C/C++",
+          "SQL",
+          "PyTorch",
+          "Hugging Face Transformers",
+          "TensorFlow",
+          "Scikit-learn",
+          "Pandas",
+          "NumPy",
+          "Git",
+          "Linux",
+          "LaTeX",
+          "VS Code"
+        ]
       },
 
       en: {
         navAbout: "About",
+        navEducation: "Education",
         navResearch: "Research",
-        navProjects: "Projects",
         navSkills: "Skills",
         navContact: "Contact",
-        eyebrow: "AIGC · AI Agent Safety · AI Security",
+
+        eyebrow: "Artificial Intelligence · NLP · Medical AI",
         heroTitle: "Yongkang Wan",
-        heroSubtitle: "Graduate student interested in AIGC, AI Agent Safety, and AI Security, focusing on building and evaluating trustworthy agent systems.",
-        viewProjects: "View Projects",
+        heroSubtitle: "Undergraduate student majoring in Artificial Intelligence at the University of Science and Technology of China, interested in LLM evaluation, medical AI, NLP, and deep learning.",
+        viewResearch: "View Research",
         contactMe: "Contact Me",
-        profileDesc: "Graduate Student / AI Safety Researcher",
-        status: "Currently working on OpenClaw-style agent safety",
+        profileDesc: "USTC Undergraduate / Artificial Intelligence",
+        status: "Interested in LLM Evaluation, NLP, and Medical AI",
+
         aboutTitle: "About Me",
-        aboutText: "I am interested in building and evaluating trustworthy AI systems, especially long-running personalized agents with persistent memory, workspace files, tool use, and cross-session continuity.",
-        researchTitle: "Current Research",
-        researchText: "My research focuses on memory-centric safety evaluation for OpenClaw-style long-running personalized agents, including memory writing, retrieval, compaction, recovery, and tool-mediated actions.",
-        researchCard1Title: "Memory Safety",
-        researchCard1Text: "Studying how persistent memory can become an active attack surface that shapes future agent behavior.",
-        researchCard2Title: "Agent Safety Evaluation",
-        researchCard2Text: "Designing benchmarks, risk taxonomies, and automated evaluation pipelines for long-running agents.",
-        researchCard3Title: "Tool-Use Risks",
-        researchCard3Text: "Analyzing how permission boundaries, prompt injection, and long-term context may trigger unsafe tool use.",
-        projectsTitle: "Selected Projects",
-        project1Text: "A benchmark for evaluating safety risks in long-running personalized agents, covering permission boundaries, memory poisoning, persistent instruction planting, and behavior trace privacy leakage.",
-        project2Title: "AI Security Education Platform",
-        project2Text: "An AI-powered information security education and risk assessment platform for campus scenarios, including phishing detection, risk assessment, security knowledge base, and AI-based Q&A.",
-        project3Title: "Algorithm Engineering",
-        project3Text: "High-performance computational geometry optimization, including large-scale polygon separation queries, preprocessing acceleration, cache-friendly implementation, and speed-accuracy tradeoffs.",
+        aboutText: "I am an undergraduate student majoring in Artificial Intelligence at the University of Science and Technology of China. My interests include large language model evaluation, reasoning in medical vertical domains, natural language processing, medical image generation, and real-world medical data analysis.",
+
+        educationTitle: "Education",
+        eduSchool: "University of Science and Technology of China (USTC)",
+        eduMeta: "B.S. in Artificial Intelligence | Sep. 2023 – Expected Jun. 2027 | Hefei, China",
+        eduText: "GPA: 3.72 / 4.3, Rank: 21 / 80. Core courses include Machine Learning, Mathematical Analysis, and Linear Algebra.",
+        awardTitle: "USTC Outstanding Student Gold Award",
+        awardMeta: "2024",
+        awardText: "Received the USTC Outstanding Student Gold Award.",
+
+        researchTitle: "Research Experience",
+        researchIntro: "My research experience focuses on medical AI, large language model evaluation, natural language processing, deep learning, and medical data analysis.",
+
+        researchCard1Title: "LLM Evaluation in Medical Reasoning",
+        researchCard1Text: "Evaluating the reasoning logic and factual accuracy of mainstream large language models in complex medical vertical domains such as Traditional Chinese Medicine.",
+        researchCard2Title: "BERT-based Medical Fraud Detection",
+        researchCard2Text: "Fine-tuning BERT on paper titles and abstracts, and analyzing dataset bias and shortcut learning in medical text classification.",
+        researchCard3Title: "Medical Imaging and Statistical Analysis",
+        researchCard3Text: "Training pix2pix GAN models for medical image translation and analyzing relationships between brain region volume and FA values.",
+
+        exp1Title: "Evaluating LLM Reasoning in Vertical Medical Domains: Traditional Chinese Medicine",
+        exp1Meta: "Research Assistant | USTC | Early 2026 – Present",
+        exp1Text: "Surveying and evaluating the reasoning logic and factual accuracy of mainstream large language models in complex medical vertical domains such as Traditional Chinese Medicine. Exploring domain-specific objective evaluation frameworks and RAG-based technical pipelines to mitigate hallucination in rigorous medical scenarios.",
+
+        exp2Title: "BERT-based Medical Fraud Detection and Dataset Bias Analysis",
+        exp2Meta: "Core Developer | NLP & Deep Learning | USTC | Jan. 2026 – Mar. 2026",
+        exp2Text: "Fine-tuned a BERT model using only paper titles and abstracts to build a cancer-domain classifier. Conducted error analysis on limited generalization, identified severe shortcut learning caused by imbalanced data sources, and analyzed hidden biases from topic concentration and stylometric differences.",
+
+        exp3Title: "Medical Image Generation and Statistical Data Mining",
+        exp3Meta: "Core Developer | CV & Statistics | USTC | Jul. 2025 – Sep. 2025",
+        exp3Text: "Built and trained a pix2pix GAN model for cancer image translation tasks. Processed and analyzed complex medical statistical datasets to study correlations between brain region volume and fractional anisotropy values, gaining experience in real-world medical data cleaning and feature extraction.",
+
         skillsTitle: "Skills",
         contactTitle: "Contact",
-        interests: ["AI Agent Safety", "AIGC Security", "Memory-Centric Benchmarking", "Prompt Injection", "Long-running Agents", "Benchmark Design"],
-        skills: ["Python", "C++", "Java", "Spring Boot", "PyTorch", "scikit-learn", "Docker", "Linux", "LaTeX"]
+
+        interests: [
+          "LLM Evaluation",
+          "Medical AI",
+          "Natural Language Processing",
+          "Deep Learning",
+          "Medical Image Generation",
+          "Dataset Bias Analysis",
+          "RAG",
+          "Hallucination Mitigation"
+        ],
+
+        skills: [
+          "Python",
+          "C/C++",
+          "SQL",
+          "PyTorch",
+          "Hugging Face Transformers",
+          "TensorFlow",
+          "Scikit-learn",
+          "Pandas",
+          "NumPy",
+          "Git",
+          "Linux",
+          "LaTeX",
+          "VS Code"
+        ]
       }
     };
 
