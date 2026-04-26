@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -79,6 +79,7 @@
       align-items: center;
       gap: 18px;
       font-size: 14px;
+      flex-wrap: wrap;
     }
 
     .nav-links a {
@@ -177,24 +178,27 @@
     .profile-card {
       border-radius: 28px;
       padding: 26px;
-      background:
-        linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.72));
+      background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(255,255,255,0.72));
       border: 1px solid var(--border);
       text-align: center;
     }
 
     .avatar {
-      width: 112px;
-      height: 112px;
+      width: 132px;
+      height: 132px;
       margin: 4px auto 18px;
       border-radius: 50%;
-      display: grid;
-      place-items: center;
-      font-size: 34px;
-      font-weight: 800;
-      color: white;
-      background: linear-gradient(135deg, #2563eb, #0ea5e9);
-      box-shadow: 0 14px 35px rgba(37, 99, 235, 0.28);
+      overflow: hidden;
+      border: 4px solid white;
+      box-shadow: 0 14px 35px rgba(37, 99, 235, 0.20);
+      background: #e5e7eb;
+    }
+
+    .avatar img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
     }
 
     .profile-card h2 {
@@ -333,10 +337,6 @@
         flex-direction: column;
       }
 
-      .nav-links {
-        flex-wrap: wrap;
-      }
-
       .hero {
         grid-template-columns: 1fr;
         padding: 26px;
@@ -359,32 +359,35 @@
       <div class="brand">Yongkang Wan</div>
 
       <div class="nav-links">
-        <a href="#about" data-i18n="navAbout">关于我</a>
-        <a href="#education" data-i18n="navEducation">教育背景</a>
-        <a href="#research" data-i18n="navResearch">科研经历</a>
-        <a href="#skills" data-i18n="navSkills">专业技能</a>
-        <a href="#contact" data-i18n="navContact">联系方式</a>
-        <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">English</button>
+        <a href="#about" data-i18n="navAbout">About</a>
+        <a href="#education" data-i18n="navEducation">Education</a>
+        <a href="#research" data-i18n="navResearch">Research</a>
+        <a href="#collaborators" data-i18n="navCollaborators">Collaborators</a>
+        <a href="#skills" data-i18n="navSkills">Skills</a>
+        <a href="#contact" data-i18n="navContact">Contact</a>
+        <button class="lang-btn" onclick="toggleLanguage()" id="langBtn">中文</button>
       </div>
     </nav>
 
     <header class="hero">
       <div>
         <div class="eyebrow" data-i18n="eyebrow">Artificial Intelligence · NLP · Medical AI</div>
-        <h1 data-i18n="heroTitle">万永康</h1>
+        <h1 data-i18n="heroTitle">Yongkang Wan</h1>
         <p class="subtitle" data-i18n="heroSubtitle">
-          中国科学技术大学人工智能专业本科生，关注大语言模型评测、医学人工智能、自然语言处理与深度学习。
+          Undergraduate student majoring in Artificial Intelligence at the University of Science and Technology of China, interested in LLM evaluation, medical AI, NLP, and deep learning.
         </p>
 
         <div class="hero-actions">
-          <a class="btn primary" href="#research" data-i18n="viewResearch">查看科研经历</a>
+          <a class="btn primary" href="#research" data-i18n="viewResearch">View Research</a>
           <a class="btn" href="https://github.com/yongkangwan" target="_blank">GitHub</a>
-          <a class="btn" href="#contact" data-i18n="contactMe">联系我</a>
+          <a class="btn" href="#contact" data-i18n="contactMe">Contact Me</a>
         </div>
       </div>
 
       <aside class="profile-card">
-        <div class="avatar">YW</div>
+        <div class="avatar">
+          <img src="profile.jpg" alt="Yongkang Wan">
+        </div>
         <h2>Yongkang Wan</h2>
         <p data-i18n="profileDesc">USTC Undergraduate / Artificial Intelligence</p>
         <span class="status" data-i18n="status">Interested in LLM Evaluation, NLP, and Medical AI</span>
@@ -392,99 +395,124 @@
     </header>
 
     <section id="about">
-      <h2 class="section-title" data-i18n="aboutTitle">关于我</h2>
+      <h2 class="section-title" data-i18n="aboutTitle">About Me</h2>
       <p class="section-desc" data-i18n="aboutText">
-        我目前就读于中国科学技术大学人工智能专业，研究兴趣集中在大语言模型评测、医学垂直领域推理、自然语言处理、医学图像生成以及真实世界医疗数据分析。
+        I am an undergraduate student majoring in Artificial Intelligence at the University of Science and Technology of China. My interests include large language model evaluation, reasoning in medical vertical domains, natural language processing, medical image generation, and real-world medical data analysis.
       </p>
 
       <div class="tags" id="interestTags"></div>
     </section>
 
     <section id="education">
-      <h2 class="section-title" data-i18n="educationTitle">教育背景</h2>
+      <h2 class="section-title" data-i18n="educationTitle">Education</h2>
 
       <div class="timeline">
         <div class="timeline-item">
-          <h3 data-i18n="eduSchool">中国科学技术大学（USTC）</h3>
-          <span class="meta" data-i18n="eduMeta">理学学士，人工智能专业｜2023 年 9 月 – 预计 2027 年 6 月｜合肥，中国</span>
+          <h3 data-i18n="eduSchool">University of Science and Technology of China (USTC)</h3>
+          <span class="meta" data-i18n="eduMeta">B.S. in Artificial Intelligence | Sep. 2023 – Expected Jun. 2027 | Hefei, China</span>
           <p data-i18n="eduText">
-            GPA: 3.72 / 4.3，专业排名: 17 / 81。核心课程包括机器学习、数学分析、线性代数等。
+            GPA: 3.72 / 4.3, Rank: 17 / 81. Core courses include Machine Learning, Mathematical Analysis, and Linear Algebra.
           </p>
         </div>
 
         <div class="timeline-item">
-          <h3 data-i18n="awardTitle">中国科学技术大学优秀学生金奖</h3>
-          <span class="meta" data-i18n="awardMeta">2024 年</span>
+          <h3 data-i18n="awardTitle">USTC Outstanding Student Gold Award</h3>
+          <span class="meta" data-i18n="awardMeta">2024</span>
           <p data-i18n="awardText">
-            获得中国科学技术大学优秀学生金奖。
+            Received the USTC Outstanding Student Gold Award.
           </p>
         </div>
       </div>
     </section>
 
     <section id="research">
-      <h2 class="section-title" data-i18n="researchTitle">科研经历</h2>
+      <h2 class="section-title" data-i18n="researchTitle">Research Experience</h2>
       <p class="section-desc" data-i18n="researchIntro">
-        我的研究经历主要围绕医学人工智能、大语言模型评测、自然语言处理、深度学习与医学数据分析展开。
+        My research experience focuses on medical AI, large language model evaluation, natural language processing, deep learning, and medical data analysis.
       </p>
 
       <div class="grid">
         <div class="card">
-          <h3 data-i18n="researchCard1Title">大语言模型医学推理评测</h3>
+          <h3 data-i18n="researchCard1Title">LLM Evaluation in Medical Reasoning</h3>
           <p data-i18n="researchCard1Text">
-            调研并评估主流大语言模型在传统中医药等复杂医学垂直领域中的推理逻辑与事实准确性。
+            Evaluating the reasoning logic and factual accuracy of mainstream large language models in complex medical vertical domains such as Traditional Chinese Medicine.
           </p>
         </div>
 
         <div class="card">
-          <h3 data-i18n="researchCard2Title">BERT 医学造假检测</h3>
+          <h3 data-i18n="researchCard2Title">BERT-based Medical Fraud Detection</h3>
           <p data-i18n="researchCard2Text">
-            基于论文标题与摘要微调 BERT，并分析医学文本分类任务中的数据偏差与捷径学习问题。
+            Fine-tuning BERT on paper titles and abstracts, and analyzing dataset bias and shortcut learning in medical text classification.
           </p>
         </div>
 
         <div class="card">
-          <h3 data-i18n="researchCard3Title">医学影像与统计分析</h3>
+          <h3 data-i18n="researchCard3Title">Medical Imaging and Statistical Analysis</h3>
           <p data-i18n="researchCard3Text">
-            搭建 pix2pix GAN 进行医学图像翻译，并分析医学统计数据中的脑区体积与 FA 值关系。
+            Training pix2pix GAN models for medical image translation and analyzing relationships between brain region volume and FA values.
           </p>
         </div>
       </div>
 
       <div class="timeline" style="margin-top: 22px;">
         <div class="timeline-item">
-          <h3 data-i18n="exp1Title">大语言模型在垂直领域（中医药）的推理能力评测</h3>
-          <span class="meta" data-i18n="exp1Meta">科研助理｜USTC｜2026 年初 – 至今</span>
+          <h3 data-i18n="exp1Title">Evaluating LLM Reasoning in Vertical Medical Domains: Traditional Chinese Medicine</h3>
+          <span class="meta" data-i18n="exp1Meta">Research Assistant | USTC | Early 2026 – Present</span>
           <p data-i18n="exp1Text">
-            调研并评估当前主流大型语言模型在传统中医药等复杂医学垂直领域的推理逻辑与事实准确性；探索领域特异性的客观评测框架，并研究基于 RAG 的技术链路，以缓解大语言模型在严谨医学场景下的幻觉问题。
+            Surveying and evaluating the reasoning logic and factual accuracy of mainstream large language models in complex medical vertical domains such as Traditional Chinese Medicine. Exploring domain-specific objective evaluation frameworks and RAG-based technical pipelines to mitigate hallucination in rigorous medical scenarios.
           </p>
         </div>
 
         <div class="timeline-item">
-          <h3 data-i18n="exp2Title">基于 BERT 的医学造假检测与数据集偏差分析</h3>
-          <span class="meta" data-i18n="exp2Meta">核心开发者｜NLP & Deep Learning｜USTC｜2026 年 1 月 – 2026 年 3 月</span>
+          <h3 data-i18n="exp2Title">BERT-based Medical Fraud Detection and Dataset Bias Analysis</h3>
+          <span class="meta" data-i18n="exp2Meta">Core Developer | NLP & Deep Learning | USTC | Jan. 2026 – Mar. 2026</span>
           <p data-i18n="exp2Text">
-            使用 BERT 模型，仅基于论文标题与摘要进行微调，尝试构建癌症领域分类器；针对模型泛化能力受限现象进行错误分析，定位由数据来源分布不均导致的捷径学习问题，并进一步分析主题分布与英文写作风格差异带来的隐性偏差。
+            Fine-tuned a BERT model using only paper titles and abstracts to build a cancer-domain classifier. Conducted error analysis on limited generalization, identified severe shortcut learning caused by imbalanced data sources, and analyzed hidden biases from topic concentration and stylometric differences.
           </p>
         </div>
 
         <div class="timeline-item">
-          <h3 data-i18n="exp3Title">医学影像生成与统计数据挖掘</h3>
-          <span class="meta" data-i18n="exp3Meta">核心开发者｜CV & Statistics｜USTC｜2025 年 7 月 – 2025 年 9 月</span>
+          <h3 data-i18n="exp3Title">Medical Image Generation and Statistical Data Mining</h3>
+          <span class="meta" data-i18n="exp3Meta">Core Developer | CV & Statistics | USTC | Jul. 2025 – Sep. 2025</span>
           <p data-i18n="exp3Text">
-            搭建并训练 pix2pix 生成对抗网络模型，探索癌症图像翻译任务；处理并分析复杂医学统计数据集，探究脑区体积与各向异性分数（FA 值）之间的相关性，并积累真实世界医疗数据清洗与特征提取经验。
+            Built and trained a pix2pix GAN model for cancer image translation tasks. Processed and analyzed complex medical statistical datasets to study correlations between brain region volume and fractional anisotropy values, gaining experience in real-world medical data cleaning and feature extraction.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="collaborators">
+      <h2 class="section-title" data-i18n="collabTitle">Collaborators</h2>
+      <p class="section-desc" data-i18n="collabIntro">
+        I have been fortunate to work with supervisors and collaborators on medical AI and large language model evaluation projects.
+      </p>
+
+      <div class="timeline">
+        <div class="timeline-item">
+          <h3 data-i18n="collab1Name">Jiangtao Wang</h3>
+          <span class="meta" data-i18n="collab1Meta">Supervisor / Collaborator</span>
+          <p data-i18n="collab1Text">
+            Collaborated on the project “Evaluating LLM Reasoning in Vertical Medical Domains: Traditional Chinese Medicine”.
+          </p>
+        </div>
+
+        <div class="timeline-item">
+          <h3 data-i18n="collab2Name">Shuai Shao</h3>
+          <span class="meta" data-i18n="collab2Meta">Supervisor / Collaborator</span>
+          <p data-i18n="collab2Text">
+            Collaborated on the project “Evaluating LLM Reasoning in Vertical Medical Domains: Traditional Chinese Medicine”.
           </p>
         </div>
       </div>
     </section>
 
     <section id="skills">
-      <h2 class="section-title" data-i18n="skillsTitle">专业技能</h2>
+      <h2 class="section-title" data-i18n="skillsTitle">Skills</h2>
       <div class="tags" id="skillTags"></div>
     </section>
 
     <section id="contact">
-      <h2 class="section-title" data-i18n="contactTitle">联系方式</h2>
+      <h2 class="section-title" data-i18n="contactTitle">Contact</h2>
       <p>
         Email: <a href="mailto:wyk09160258@mail.ustc.edu.cn">wyk09160258@mail.ustc.edu.cn</a><br />
         GitHub: <a href="https://github.com/yongkangwan" target="_blank">@yongkangwan</a><br />
@@ -498,13 +526,14 @@
   </div>
 
   <script>
-    let currentLang = "zh";
+    let currentLang = "en";
 
     const content = {
       zh: {
         navAbout: "关于我",
         navEducation: "教育背景",
         navResearch: "科研经历",
+        navCollaborators: "合作者",
         navSkills: "专业技能",
         navContact: "联系方式",
 
@@ -549,6 +578,15 @@
         exp3Meta: "核心开发者｜CV & Statistics｜USTC｜2025 年 7 月 – 2025 年 9 月",
         exp3Text: "搭建并训练 pix2pix 生成对抗网络模型，探索癌症图像翻译任务；处理并分析复杂医学统计数据集，探究脑区体积与各向异性分数（FA 值）之间的相关性，并积累真实世界医疗数据清洗与特征提取经验。",
 
+        collabTitle: "合作者",
+        collabIntro: "我有幸在医学人工智能和大语言模型评测相关项目中与导师和合作者开展合作。",
+        collab1Name: "王江涛",
+        collab1Meta: "指导老师 / 合作者",
+        collab1Text: "在“大语言模型在垂直领域（中医药）的推理能力评测”项目中开展合作。",
+        collab2Name: "邵帅",
+        collab2Meta: "指导老师 / 合作者",
+        collab2Text: "在“大语言模型在垂直领域（中医药）的推理能力评测”项目中开展合作。",
+
         skillsTitle: "专业技能",
         contactTitle: "联系方式",
 
@@ -584,6 +622,7 @@
         navAbout: "About",
         navEducation: "Education",
         navResearch: "Research",
+        navCollaborators: "Collaborators",
         navSkills: "Skills",
         navContact: "Contact",
 
@@ -627,6 +666,15 @@
         exp3Title: "Medical Image Generation and Statistical Data Mining",
         exp3Meta: "Core Developer | CV & Statistics | USTC | Jul. 2025 – Sep. 2025",
         exp3Text: "Built and trained a pix2pix GAN model for cancer image translation tasks. Processed and analyzed complex medical statistical datasets to study correlations between brain region volume and fractional anisotropy values, gaining experience in real-world medical data cleaning and feature extraction.",
+
+        collabTitle: "Collaborators",
+        collabIntro: "I have been fortunate to work with supervisors and collaborators on medical AI and large language model evaluation projects.",
+        collab1Name: "Jiangtao Wang",
+        collab1Meta: "Supervisor / Collaborator",
+        collab1Text: "Collaborated on the project “Evaluating LLM Reasoning in Vertical Medical Domains: Traditional Chinese Medicine”.",
+        collab2Name: "Shuai Shao",
+        collab2Meta: "Supervisor / Collaborator",
+        collab2Text: "Collaborated on the project “Evaluating LLM Reasoning in Vertical Medical Domains: Traditional Chinese Medicine”.",
 
         skillsTitle: "Skills",
         contactTitle: "Contact",
@@ -689,7 +737,7 @@
       setLanguage(currentLang === "zh" ? "en" : "zh");
     }
 
-    setLanguage("zh");
+    setLanguage("en");
   </script>
 </body>
 </html>
